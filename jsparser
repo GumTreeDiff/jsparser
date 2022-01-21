@@ -5,7 +5,7 @@ const dashAst = require('dash-ast')
 const XmlWriter = require('xml-writer');
 const fs = require('fs')
 const code = fs.readFileSync(process.argv[2], 'utf8')
-const ast = acorn.parse(code, {ecmaVersion: 2020});
+const ast = acorn.parse(code, {ecmaVersion: 2020, sourceType: 'module'});
 const xml = new XmlWriter(true);
 xml.startDocument();
 
